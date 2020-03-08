@@ -92,7 +92,7 @@ header .links a:hover::after{
     color: #3d3d3d;
     padding: 5px 0;
     margin-bottom: 16px;
-    border-bottom: 1px solid #dbdbdb;
+    border-bottom: 1px solid #4b4b4b;
 }
 
 .detalhes .item {
@@ -118,4 +118,15 @@ header .links a:hover::after{
     font-weight: normal;
     font-size: 16px;
     line-height: 26px;
+}
+
+.detalhes .item span {
+    background-color: #32ff7e;
+    padding: 7px 15px;
+    border-radius: 20px;
+    margin: 10px 5px 0 0;
+    display: inline-block;
+    color: #4b4b4b;
+    font-weight: bold;
+    font-size: 14px;
 }
