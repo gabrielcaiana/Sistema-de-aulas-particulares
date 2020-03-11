@@ -130,3 +130,37 @@ header .links a:hover::after{
     font-weight: bold;
     font-size: 14px;
 }
+
+/* form */
+
+.detalhes input {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    outline: none;
+    color: #3d3d3d; 
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.detalhes input::placeholder {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.detalhes input[type="radio"] {
+   width: initial;
+   margin-right: 5px;
+}
+
+.detalhes button[type="submit"] {
+    width: 80%;
+    padding: 16px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: #6b6b6a;
+    color: #fff;
+    font-weight: bold;
+}
