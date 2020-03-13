@@ -1,0 +1,22 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://gabrielcaiana.com.br",
+      "name": "Gabriel Caiana",
+      "birth": 823651200000,
+      "typeAula": "presencial",
+      "atuacao": "UX, HTML",
+      "created_at": 1584066939091
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://www.dev.com.br",
+      "name": "Jose augusto",
+      "birth": -24763795200000,
+      "typeAula": "presencial",
+      "atuacao": "Back-end, Banco de dados",
+      "created_at": 1584067058140
+    }
+  ]
+}
