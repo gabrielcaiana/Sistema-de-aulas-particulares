@@ -1,5 +1,6 @@
 const express = require('express')
 const routes = express.Router()
+const teachers = require('./teachers')
 
 routes.get('/', function(req, res) {
     res.redirect('teachers/index')
@@ -9,9 +10,8 @@ routes.get('/teachers/index', function(req, res) {
     res.render('teachers/index')
 })
 
-routes.post('/teachers', function(req, res) {
-    return res.send('recebido')
-})
+//Estrutura de validação do cadastro de professores
+routes.post('/teachers', teachers.post)
 
 routes.get('/teachers/registerTeacher', function(req, res) {
     return res.render('teachers/registerTeacher')
