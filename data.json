@@ -17,6 +17,24 @@
       "typeAula": "presencial",
       "atuacao": "Back-end, Banco de dados",
       "created_at": 1584067058140
+    },
+    {
+      "id": 3,
+      "avatar_url": "http://gabrielcaiana.com.br",
+      "name": "Gabriel Caiana",
+      "birth": 203513990400000,
+      "typeAula": "presencial",
+      "atuacao": "ux",
+      "created_at": 1584095650781
+    },
+    {
+      "id": 4,
+      "avatar_url": "http://www.giselyalmeida.com.br",
+      "name": "Gisely Almeida",
+      "birth": 34399728000000,
+      "typeAula": "presencial",
+      "atuacao": "Marketing, Moda",
+      "created_at": 1584283048558
     }
   ]
 }
