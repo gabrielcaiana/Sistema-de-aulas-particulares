@@ -12,7 +12,7 @@
 
             <div class="item">
                 <div>Idade</div>
-                <div>{{ teacher.birth }}</div>
+                <div>{{ teacher.age }}</div>
             </div>
 
             <div class="item">
@@ -41,8 +41,10 @@
 
             <div class="item">
                 <div>Desde</div>
-                <div>01/01/2020</div>
+                <div>{{ teacher.created_at}}</div>
             </div>
+
+            <button class="editar">Editar</button>
         </div>
     </div>
 {% endblock content %}

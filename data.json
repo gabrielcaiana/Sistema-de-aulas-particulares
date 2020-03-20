@@ -2,16 +2,6 @@
   "teachers": [
     {
       "id": 1,
-      "avatar_url": "http://gabrielcaiana.com.br",
-      "name": "Gabriel Caiana",
-      "birth": 849052800000,
-      "selectEducation": "superior",
-      "typeAula": "distância",
-      "atuacao": "UX Design, Desenvolvimento web",
-      "created_at": 1584716536725
-    },
-    {
-      "id": 2,
       "avatar_url": "http://www.giselyalmeida.com",
       "name": "Gisely Almeida de Aquino",
       "birth": 8081251200000,
@@ -21,7 +11,7 @@
       "created_at": 1584717204344
     },
     {
-      "id": 3,
+      "id": 2,
       "avatar_url": "http://www.sara.com.br",
       "name": "Sara Caiana",
       "birth": 7230038400000,
@@ -31,7 +21,7 @@
       "created_at": 1584717295071
     },
     {
-      "id": 4,
+      "id": 3,
       "avatar_url": "http://www.antonioduarte.com.br",
       "name": "Antonio duarte guedes",
       "birth": 35942400000,
@@ -41,7 +31,7 @@
       "created_at": 1584717340942
     },
     {
-      "id": 5,
+      "id": 4,
       "avatar_url": "http://www.pollycaiana.com.br",
       "name": "Polly Caiana",
       "birth": -98496000000,
@@ -51,7 +41,7 @@
       "created_at": 1584717384069
     },
     {
-      "id": 6,
+      "id": 5,
       "avatar_url": "http://lara.com",
       "name": "Lara Almeida",
       "birth": -9499939200000,
@@ -59,6 +49,16 @@
       "typeAula": "presencial",
       "atuacao": "UX Design, Desenvolvimento web",
       "created_at": 1584717518955
+    },
+    {
+      "id": 6,
+      "avatar_url": "http://gabrielcaiana.com.br",
+      "name": "Gabriel Caiana Guedes",
+      "birth": 849052800000,
+      "selectEducation": "doutorado",
+      "typeAula": "distância",
+      "atuacao": "UX Design, UI Design, Front-End Developer",
+      "created_at": 1584721765209
     }
   ]
 }

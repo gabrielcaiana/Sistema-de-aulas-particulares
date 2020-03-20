@@ -154,8 +154,8 @@ header .links a:hover::after{
    margin-right: 5px;
 }
 
-.detalhes button[type="submit"] {
-    width: 80%;
+.detalhes button[type="submit"], .editar {
+    width: 100%;
     padding: 16px;
     border-radius: 5px;
     border: none;
