@@ -18,10 +18,7 @@
             <div class="item">
                 <div>Grau de escolaridade</div>
                 <div>
-                    {{ "Ensino médio completo" if teacher.selectEducation == "medio"}}
-                    {{ "Ensino superior completo" if teacher.selectEducation == "superior"}}
-                    {{ "Mestrado" if teacher.selectEducation == "mestrado"}}
-                    {{ "Doutorado" if teacher.selectEducation == "doutorado"}}
+                    {{ teacher.graduation }}
                 </div>
             </div>
 
