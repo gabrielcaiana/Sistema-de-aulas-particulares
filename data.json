@@ -4,37 +4,61 @@
       "id": 1,
       "avatar_url": "http://gabrielcaiana.com.br",
       "name": "Gabriel Caiana",
-      "birth": 823651200000,
-      "typeAula": "presencial",
-      "atuacao": "UX, HTML",
-      "created_at": 1584066939091
+      "birth": 849052800000,
+      "selectEducation": "superior",
+      "typeAula": "distância",
+      "atuacao": "UX Design, Desenvolvimento web",
+      "created_at": 1584716536725
     },
     {
       "id": 2,
-      "avatar_url": "http://www.dev.com.br",
-      "name": "Jose augusto",
-      "birth": -24763795200000,
+      "avatar_url": "http://www.giselyalmeida.com",
+      "name": "Gisely Almeida de Aquino",
+      "birth": 8081251200000,
+      "selectEducation": "medio",
       "typeAula": "presencial",
-      "atuacao": "Back-end, Banco de dados",
-      "created_at": 1584067058140
+      "atuacao": "Marketing",
+      "created_at": 1584717204344
     },
     {
       "id": 3,
-      "avatar_url": "http://gabrielcaiana.com.br",
-      "name": "Gabriel Caiana",
-      "birth": 203513990400000,
+      "avatar_url": "http://www.sara.com.br",
+      "name": "Sara Caiana",
+      "birth": 7230038400000,
+      "selectEducation": "mestrado",
       "typeAula": "presencial",
-      "atuacao": "ux",
-      "created_at": 1584095650781
+      "atuacao": "Back-end, Banco de dados",
+      "created_at": 1584717295071
     },
     {
       "id": 4,
-      "avatar_url": "http://www.giselyalmeida.com.br",
-      "name": "Gisely Almeida",
-      "birth": 34399728000000,
+      "avatar_url": "http://www.antonioduarte.com.br",
+      "name": "Antonio duarte guedes",
+      "birth": 35942400000,
+      "selectEducation": "doutorado",
+      "typeAula": "distância",
+      "atuacao": "UX, HTML",
+      "created_at": 1584717340942
+    },
+    {
+      "id": 5,
+      "avatar_url": "http://www.pollycaiana.com.br",
+      "name": "Polly Caiana",
+      "birth": -98496000000,
+      "selectEducation": "medio",
       "typeAula": "presencial",
-      "atuacao": "Marketing, Moda",
-      "created_at": 1584283048558
+      "atuacao": "Marketing",
+      "created_at": 1584717384069
+    },
+    {
+      "id": 6,
+      "avatar_url": "http://lara.com",
+      "name": "Lara Almeida",
+      "birth": -9499939200000,
+      "selectEducation": "superior",
+      "typeAula": "presencial",
+      "atuacao": "UX Design, Desenvolvimento web",
+      "created_at": 1584717518955
     }
   ]
 }

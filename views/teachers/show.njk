@@ -1,0 +1,48 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+    <div class="card">
+        <div class="avatar"></div>
+        <div class="detalhes">
+            <h3>Detalhes</h3>
+            <div class="item">
+                <div>Nome completo</div>
+                <div>{{ teacher.name }}</div>
+            </div>
+
+            <div class="item">
+                <div>Idade</div>
+                <div>{{ teacher.birth }}</div>
+            </div>
+
+            <div class="item">
+                <div>Grau de escolaridade</div>
+                <div>
+                    {{ "Ensino médio completo" if teacher.selectEducation == "medio"}}
+                    {{ "Ensino superior completo" if teacher.selectEducation == "superior"}}
+                    {{ "Mestrado" if teacher.selectEducation == "mestrado"}}
+                    {{ "Doutorado" if teacher.selectEducation == "doutorado"}}
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Tipo de aula</div>
+                <div>{{ teacher.typeAula }}</div>
+            </div>
+
+            <div class="item">
+                <div>Acompanhemento</div>
+                <div>
+                    {% for atuacoes in teacher.atuacao %}
+                        <span>{{ atuacoes }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Desde</div>
+                <div>01/01/2020</div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

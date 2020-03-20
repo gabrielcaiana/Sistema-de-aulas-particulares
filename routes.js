@@ -10,12 +10,13 @@ routes.get('/teachers', function(req, res) {
     res.render('teachers/index')
 })
 
-//Estrutura de validação do cadastro de professores
-routes.post('/teachers', teachers.post)
-
 routes.get('/teachers/register', function(req, res) {
     return res.render('teachers/register')
 })
+
+routes.get('/teachers/:id', teachers.show)
+
+routes.post('/teachers', teachers.post)
 
 routes.get('/students', function(req, res) {
     res.render('students/students')
