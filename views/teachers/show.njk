@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="card">
-        <div class="avatar"></div>
+        <div class="avatar" style="background: url({{ teacher.avatar_url}}) no-repeat center center"></div>
         <div class="detalhes">
             <h3>Detalhes</h3>
             <div class="item">
@@ -12,7 +12,7 @@
 
             <div class="item">
                 <div>Idade</div>
-                <div>{{ teacher.age }}</div>
+                <div>{{ teacher.age}}</div>
             </div>
 
             <div class="item">

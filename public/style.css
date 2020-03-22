@@ -78,11 +78,6 @@ header .links a:hover::after{
     }
 }
 
-.card .avatar {
-    background: url(https://source.unsplash.com/collection/1241293/500x500)no-repeat center;
-    background-size: cover;
-}
-
 .card .detalhes {
     padding: 32px;
 }
