@@ -25,13 +25,15 @@
 
 <div class="item">
     <div>Tipo de aula</div>
-    <span><input type="radio" name="typeAula" value="presencial" checked="checked">Presencial</span>
-    <span><input type="radio" name="typeAula" value="distância">Distância</span>
+    <span><input type="radio" name="typeAula" value="presencial"
+    {% if teacher.typeAula == "presencial" %} checked="checked" {% endif %} >Presencial</span>
+    <span><input type="radio" name="typeAula" value="distância"
+    {% if teacher.typeAula == "distância" %} checked="checked"  {% endif %}>Distância</span>
 </div>
 
 <div class="item">
     <div>Área de atuação</div>
-    <input type="text" name="atuacao" placeholder="Digite as áreas de atuação">
+    <input type="text" name="atuacao" placeholder="Digite as áreas de atuação" value="{{ teacher.atuacao }}">
 </div>
 
 <button type="submit">Salvar</button>
