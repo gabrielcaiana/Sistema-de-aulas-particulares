@@ -79,9 +79,10 @@ exports.put = function(req, res) {
     let index = 0
 
     const foundTeacher = data.teachers.find(function(teacher, foundIndex) {
-        if (id == teacher.id)
+        if (id == teacher.id) {
             index = foundIndex
-        return true
+            return true
+        }
     })
 
     if (!foundTeacher) return res.send('Write file error')
@@ -89,7 +90,8 @@ exports.put = function(req, res) {
     const teacher = {
         ...foundTeacher,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        id: Number(foundTeacher.id)
     }
 
     data.teachers[index] = teacher

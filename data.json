@@ -1,21 +1,11 @@
 {
   "teachers": [
     {
-      "id": "9",
-      "avatar_url": "http://i.pinimg.com/originals/2a/df/fb/2adffbee6e939b2bd1e32ffa8c763308.jpg",
-      "name": "Naruto Uzumaki",
-      "birth": 849052800000,
-      "selectEducation": "medio",
-      "typeAula": "presencial",
-      "atuacao": "Anime, Manga",
-      "created_at": 1584717204344
-    },
-    {
       "id": 2,
       "avatar_url": "http://www.sara.com.br",
       "name": "Sara Caiana",
       "birth": 7230038400000,
-      "selectEducation": "mestrado",
+      "selectEducation": "medio",
       "typeAula": "presencial",
       "atuacao": "Back-end, Banco de dados",
       "created_at": 1584717295071
@@ -83,11 +73,11 @@
     {
       "id": 9,
       "avatar_url": "http://i.pinimg.com/originals/2a/df/fb/2adffbee6e939b2bd1e32ffa8c763308.jpg",
-      "name": "Naruto",
+      "name": "Naruto ",
       "birth": 849052800000,
-      "selectEducation": "superior",
-      "typeAula": "distância",
-      "atuacao": "Anime",
+      "selectEducation": "medio",
+      "typeAula": "presencial",
+      "atuacao": "Anime, Manga",
       "created_at": 1584838436243
     },
     {
