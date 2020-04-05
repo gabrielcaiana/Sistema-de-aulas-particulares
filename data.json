@@ -1,36 +1,6 @@
 {
   "teachers": [
     {
-      "id": 2,
-      "avatar_url": "http://www.sara.com.br",
-      "name": "Sara Caiana",
-      "birth": 7230038400000,
-      "selectEducation": "medio",
-      "typeAula": "presencial",
-      "atuacao": "Back-end, Banco de dados",
-      "created_at": 1584717295071
-    },
-    {
-      "id": 3,
-      "avatar_url": "http://www.antonioduarte.com.br",
-      "name": "Antonio duarte guedes",
-      "birth": 35942400000,
-      "selectEducation": "doutorado",
-      "typeAula": "distância",
-      "atuacao": "UX, HTML",
-      "created_at": 1584717340942
-    },
-    {
-      "id": 4,
-      "avatar_url": "http://www.pollycaiana.com.br",
-      "name": "Polly Caiana",
-      "birth": -98496000000,
-      "selectEducation": "medio",
-      "typeAula": "presencial",
-      "atuacao": "Marketing",
-      "created_at": 1584717384069
-    },
-    {
       "id": 5,
       "avatar_url": "http://lara.com",
       "name": "Lara Almeida",
@@ -39,16 +9,6 @@
       "typeAula": "presencial",
       "atuacao": "UX Design, Desenvolvimento web",
       "created_at": 1584717518955
-    },
-    {
-      "id": 6,
-      "avatar_url": "http://gabrielcaiana.com.br",
-      "name": "Gabriel Caiana Guedes",
-      "birth": 849052800000,
-      "selectEducation": "doutorado",
-      "typeAula": "distância",
-      "atuacao": "UX Design, UI Design, Front-End Developer",
-      "created_at": 1584721765209
     },
     {
       "id": 7,
@@ -71,16 +31,6 @@
       "created_at": 1584837994671
     },
     {
-      "id": 9,
-      "avatar_url": "http://i.pinimg.com/originals/2a/df/fb/2adffbee6e939b2bd1e32ffa8c763308.jpg",
-      "name": "Naruto ",
-      "birth": 849052800000,
-      "selectEducation": "medio",
-      "typeAula": "presencial",
-      "atuacao": "Anime, Manga",
-      "created_at": 1584838436243
-    },
-    {
       "id": 10,
       "avatar_url": "http://www.gigi.com",
       "name": "Gigi",
@@ -92,13 +42,23 @@
     },
     {
       "id": 11,
-      "avatar_url": "http://www.gi.com",
-      "name": "Ton",
+      "avatar_url": "http://www.alicecaiana.com",
+      "name": "Alice Caiana",
       "birth": 63780134400000,
-      "selectEducation": "doutorado",
-      "typeAula": "distância",
-      "atuacao": "Teste, Teste02",
+      "selectEducation": "medio",
+      "typeAula": "presencial",
+      "atuacao": "Teste, Teste02, teste03",
       "created_at": 1585101735911
+    },
+    {
+      "id": 11,
+      "avatar_url": "http://www.itachiuchiha.com",
+      "name": "Itachi Uchiha",
+      "birth": 697766400000,
+      "selectEducation": "medio",
+      "typeAula": "distância",
+      "atuacao": "Anime",
+      "created_at": 1586064922075
     }
   ]
 }

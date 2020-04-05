@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -7,11 +6,13 @@
 }
 
 body {
-    font-family: 'Roboto', Helvetica, sans-serif ;
+    font-family: 'Roboto', Helvetica, sans-serif;
     background-color: #3d3d3d;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     color: #fff;
 }
 
@@ -21,7 +22,6 @@ header {
     background-color: #4b4b4b;
     text-align: center;
 }
-
 
 header .links a {
     text-decoration: none;
@@ -33,7 +33,7 @@ header .links a:hover {
     color: #32ff7e;
 }
 
-header .links a + a {
+header .links a+a {
     margin-left: 15px;
 }
 
@@ -52,7 +52,7 @@ header .links a::after {
     bottom: -4px;
 }
 
-header .links a:hover::after{
+header .links a:hover::after {
     width: 100%;
     transition: width 300ms ease-in-out;
 }
@@ -96,11 +96,11 @@ header .links a:hover::after{
 }
 
 .detalhes .item:first-of-type {
-    border: none; 
+    border: none;
 }
 
 .detalhes .item div:nth-child(1) {
-    color: #3d3d3d; 
+    color: #3d3d3d;
     font-weight: bold;
     padding-bottom: 5px;
     font-size: 14px;
@@ -109,7 +109,7 @@ header .links a:hover::after{
 }
 
 .detalhes .item div:nth-child(2) {
-    color: #3d3d3d; 
+    color: #3d3d3d;
     font-weight: normal;
     font-size: 16px;
     line-height: 26px;
@@ -126,6 +126,7 @@ header .links a:hover::after{
     font-size: 14px;
 }
 
+
 /* form */
 
 .detalhes input {
@@ -133,7 +134,7 @@ header .links a:hover::after{
     padding: 8px 0;
     border: none;
     outline: none;
-    color: #3d3d3d; 
+    color: #3d3d3d;
     font-weight: bold;
     font-size: 16px;
     line-height: 26px;
@@ -145,11 +146,11 @@ header .links a:hover::after{
 }
 
 .detalhes input[type="radio"] {
-   width: initial;
-   margin-right: 5px;
+    width: initial;
+    margin-right: 5px;
 }
 
-.detalhes button[type="submit"], .editar {
+.detalhes .editar {
     width: 100%;
     padding: 16px;
     border-radius: 5px;
@@ -158,4 +159,30 @@ header .links a:hover::after{
     background-color: #6b6b6a;
     color: #fff;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.detalhes button[type="submit"] {
+    width: 49%;
+    padding: 16px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: #6b6b6a;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#form-delete {
+    position: relative;
+}
+
+#form-delete button[type="submit"] {
+    margin-top: 8px;
+    background-color: lightcoral;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -60px;
 }
