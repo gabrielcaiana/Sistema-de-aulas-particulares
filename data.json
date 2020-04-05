@@ -39,26 +39,6 @@
       "typeAula": "distância",
       "atuacao": "Teste, Teste02",
       "created_at": 1585101603826
-    },
-    {
-      "id": 11,
-      "avatar_url": "http://www.alicecaiana.com",
-      "name": "Alice Caiana",
-      "birth": 63780134400000,
-      "selectEducation": "medio",
-      "typeAula": "presencial",
-      "atuacao": "Teste, Teste02, teste03",
-      "created_at": 1585101735911
-    },
-    {
-      "id": 11,
-      "avatar_url": "http://www.itachiuchiha.com",
-      "name": "Itachi Uchiha",
-      "birth": 697766400000,
-      "selectEducation": "medio",
-      "typeAula": "distância",
-      "atuacao": "Anime",
-      "created_at": 1586064922075
     }
   ]
 }
