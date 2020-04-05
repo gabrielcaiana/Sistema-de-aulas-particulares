@@ -5,7 +5,10 @@
         <div class="avatar" style="background: url({{ teacher.avatar_url}}) no-repeat center center"></div>
         <div class="detalhes">
             <h3>Editar Professor</h3>
-            {% include 'teachers/fields.njk' %}
+             <form method="POST" action="/teachers?_method=PUT">
+                {% include 'teachers/fields.njk' %}
+                <input type="hidden" name="id" value="{{teacher.id}}">
+            </form>
         </div>
     </div>
 {% endblock content %}

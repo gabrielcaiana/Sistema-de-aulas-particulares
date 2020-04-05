@@ -2,9 +2,9 @@ const fs = require("fs")
 const data = require("./data.json")
 const { calculatorAge, graduation, date } = require('./utills')
 
-exports.show = function (req, res) {
+exports.show = function(req, res) {
     const { id } = req.params
-    const foundTeacher = data.teachers.find(function (teachers) {
+    const foundTeacher = data.teachers.find(function(teachers) {
         return teachers.id == id
     })
 
@@ -23,7 +23,7 @@ exports.show = function (req, res) {
     return res.render('teachers/show', { teacher })
 }
 
-exports.post = function (req, res) {
+exports.post = function(req, res) {
     const keys = Object.keys(req.body)
     for (key of keys) {
         if (req.body[key] == '') {
@@ -48,7 +48,7 @@ exports.post = function (req, res) {
         created_at
     })
 
-    fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
         if (err) {
             return res.send('Erro ao escrever o arquivo!')
         }
@@ -61,7 +61,7 @@ exports.edit = function(req, res) {
     const { id } = req.params
     const foundTeacher = data.teachers.find(teachers => teachers.id == id) //mesma coisa que isso --> find(function (teachers) {return teachers.id == id
 
-    if(!foundTeacher) {
+    if (!foundTeacher) {
         return res.send('Professor não encontrado!')
     }
 
@@ -72,4 +72,31 @@ exports.edit = function(req, res) {
     }
 
     return res.render('teachers/edit', { teacher })
+}
+
+exports.put = function(req, res) {
+    const { id } = req.body
+    let index = 0
+
+    const foundTeacher = data.teachers.find(function(teacher, foundIndex) {
+        if (id == teacher.id)
+            index = foundIndex
+        return true
+    })
+
+    if (!foundTeacher) return res.send('Write file error')
+
+    const teacher = {
+        ...foundTeacher,
+        ...req.body,
+        birth: Date.parse(req.body.birth)
+    }
+
+    data.teachers[index] = teacher
+
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
+        if (err) return res.send('Write file error')
+        return res.redirect(`/teachers/${id}`)
+    })
+
 }
