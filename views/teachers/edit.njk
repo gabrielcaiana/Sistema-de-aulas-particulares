@@ -8,6 +8,7 @@
              <form method="POST" action="/teachers?_method=PUT">
                 {% include 'teachers/fields.njk' %}
                 <input type="hidden" name="id" value="{{teacher.id}}">
+                <button type="submit">Salvar</button>
                 
             </form>
 
