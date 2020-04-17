@@ -2,6 +2,10 @@ const fs = require("fs")
 const data = require("./data.json")
 const { calculatorAge, graduation, date } = require('./utills')
 
+exports.index = function(req, res) {
+    res.render('teachers/index')
+}
+
 exports.show = function(req, res) {
     const { id } = req.params
     const foundTeacher = data.teachers.find(function(teachers) {
