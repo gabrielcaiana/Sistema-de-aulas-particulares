@@ -186,3 +186,79 @@ header .links a:hover::after {
     right: 0;
     top: -60px;
 }
+
+/* Table index*/
+
+.table-container {
+    display: block;
+    padding: 40px;
+}
+
+.table-container table {
+    border-spacing: 0;
+}
+
+.table-container thead tr th {
+    text-align: left;
+}
+
+td,
+th {
+    padding: 16px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+tbody tr:last-child td {
+    border: none;
+}
+
+tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+}
+
+tbody tr td:first-child span {
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px;
+    border: 2px solid white;
+}
+
+thead tr th {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #777;
+}
+
+tbody tr td:last-child a {
+    background-color: #777;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.table-container thead tr th:last-child,
+td:last-child {
+    text-align: center;
+}
+
+tbody tr td:last-child a:last-child:hover {
+    background-color: #32ff7e;
+    color: #555;
+    font-weight: bold;
+}
+
+tbody tr td:nth-child(2) span {
+    background-color: #32ff7e;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: #555;
+    font-size: 14px;
+}

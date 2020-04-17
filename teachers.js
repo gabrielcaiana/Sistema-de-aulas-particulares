@@ -3,7 +3,15 @@ const data = require("./data.json")
 const { calculatorAge, graduation, date } = require('./utills')
 
 exports.index = function(req, res) {
-    res.render('teachers/index')
+    const teachers = data.teachers.map( (teacher) =>{
+        const spreadTeacher = {
+            ...teacher,
+            atuacao: teacher.atuacao.split(',')
+        }
+        return spreadTeacher
+    })
+
+    return res.render('teachers/index', {teachers})
 }
 
 exports.show = function(req, res) {
