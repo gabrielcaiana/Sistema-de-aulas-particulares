@@ -26,21 +26,24 @@ exports.post = function(req, res) {
         }
     }
 
-    let { avatar_url, name, selectEducation, typeAula, atuacao } = req.body
+    let { avatar_url, name, email, birth, selectYear, weeklySchedule, } = req.body
 
-    let birth = Date.parse(req.body.birth)
-    let created_at = Date.now()
-    let id = Number(data.students.length + 1)
+    birth = Date.parse(req.body.birth)
+
+    let id = 1
+    const lastStudent = data.students[data.students.length - 1]
+    if(lastStudent) {
+        id = lastStudent + 1
+    }
 
     data.students.push({
         id,
         avatar_url,
         name,
+        email,
         birth,
-        selectEducation,
-        typeAula,
-        atuacao,
-        created_at
+        selectYear,
+        weeklySchedule
     })
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
@@ -48,7 +51,7 @@ exports.post = function(req, res) {
             return res.send('Erro ao escrever o arquivo!')
         }
 
-        return res.redirect("/")
+        return res.redirect(`/students/${id}`)
     })
 }
 
