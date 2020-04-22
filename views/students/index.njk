@@ -1,8 +1,8 @@
 {% extends 'layout.njk' %}
 
 {% block content %}
-<div class="newTeacher">
-    <a href="teachers/register"><button>Cadastrar novo</button></a>
+<div class="new">
+    <a href="students/register"><button>Cadastrar novo</button></a>
 </div>
 <div class="card table-container">
         <table width="100%">
@@ -14,17 +14,17 @@
                 </tr>
             </thead>
             <tbody>
-            {% for teacher in teachers %}
+            {% for student in students %}
             <tr>
                 <td>
-                    <span style="background-image: url( {{ teacher.avatar_url }} )"></span>
-                    {{ teacher.name }}</td>
+                    <span style="background-image: url( {{ student.avatar_url }} )"></span>
+                    {{ student.name }}</td>
                 <td>
-              {% for atuacao in teacher.atuacao %}
+              {% for atuacao in student.atuacao %}
                         <span>{{ atuacao }}</span>
                     {% endfor %}
                 </td>
-                <td><a href="/teachers/{{ teacher.id }}">Ver</a></td>
+                <td><a href="/students/{{ student.id }}">Ver</a></td>
             </tr>
             {% endfor %}
             </tbody>

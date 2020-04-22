@@ -57,7 +57,7 @@ header .links a:hover::after {
     transition: width 300ms ease-in-out;
 }
 
-.newTeacher {
+.new {
     width: 800px;
     padding: 5px 0;
     margin: 30px auto 0 auto;
@@ -66,7 +66,7 @@ header .links a:hover::after {
     justify-content: flex-end;
 }
 
-.newTeacher button {
+.new button {
     height: 36px;
     width: 150px;
     background-color: #32ff7e ;
@@ -78,7 +78,7 @@ header .links a:hover::after {
     transition: .4s;
 }
 
-.newTeacher button:hover {
+.new button:hover {
     background-color: transparent;
     border: 1px solid #32ff7e;
     color: #32ff7e;
@@ -89,11 +89,17 @@ header .links a:hover::after {
     width: 800px;
     min-height: 500px;
     background-color: #ffffff;
-    margin: 10px auto 30px auto;
+    margin: 30px auto 30px auto;
     display: grid;
     grid-template-columns: 40% 60%;
     box-shadow: 2px 2px 2px 1px rgba(8, 8, 8, 0.2);
     animation: up 200ms ease-in-out;
+}
+
+.avatar {
+    background-size: auto 100%; 
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 @keyframes up {
@@ -120,7 +126,7 @@ header .links a:hover::after {
 
 .detalhes .item {
     border-top: 1px solid #e7e6e6;
-    padding: 16px 0;
+    padding: 8px 0;
 }
 
 .detalhes .item:first-of-type {
@@ -152,6 +158,10 @@ header .links a:hover::after {
     color: #4b4b4b;
     font-weight: bold;
     font-size: 14px;
+}
+
+.detalhes .item select {
+    margin-bottom: 16px;
 }
 
 
