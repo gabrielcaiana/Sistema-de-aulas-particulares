@@ -1,0 +1,33 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+<div class="newTeacher">
+    <a href="teachers/register"><button>Cadastrar novo</button></a>
+</div>
+<div class="card table-container">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Instrutor</th>
+                    <th>Acompanhamento</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for teacher in teachers %}
+            <tr>
+                <td>
+                    <span style="background-image: url( {{ teacher.avatar_url }} )"></span>
+                    {{ teacher.name }}</td>
+                <td>
+              {% for atuacao in teacher.atuacao %}
+                        <span>{{ atuacao }}</span>
+                    {% endfor %}
+                </td>
+                <td><a href="/teachers/{{ teacher.id }}">Ver</a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+</div>
+{% endblock content %}
