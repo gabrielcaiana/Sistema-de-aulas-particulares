@@ -5,8 +5,7 @@ const { calculatorAge, graduation, date } = require('../utills')
 exports.index = function(req, res) {
     const students = data.students.map( (student) =>{
         const spreadStudent = {
-            ...student,
-            atuacao: student.atuacao.split(',')
+            ...student
         }
         return spreadStudent
     })
@@ -67,10 +66,8 @@ exports.show = function(req, res) {
 
     const student = {
         ...foundStudent,
-        age: calculatorAge(foundStudent.birth),
-        graduation: graduation(foundStudent.selectEducation),
-        atuacao: foundStudent.atuacao.split(','),
-        created_at: new Intl.DateTimeFormat('pt-BR').format(foundStudent.created_at)
+        birth: (date.birthDay),
+        graduation: graduation(foundStudent.selectEducation)
     }
 
     return res.render('students/show', { student })

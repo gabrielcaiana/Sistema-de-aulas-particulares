@@ -20,9 +20,6 @@
                     <span style="background-image: url( {{ student.avatar_url }} )"></span>
                     {{ student.name }}</td>
                 <td>
-              {% for atuacao in student.atuacao %}
-                        <span>{{ atuacao }}</span>
-                    {% endfor %}
                 </td>
                 <td><a href="/students/{{ student.id }}">Ver</a></td>
             </tr>
