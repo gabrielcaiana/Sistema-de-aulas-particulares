@@ -15,3 +15,13 @@
 - HTML5
 - CSS3
 
+### Para executar o projeto
+
+```
+npm install
+```
+
+```
+npm start
+```
+
