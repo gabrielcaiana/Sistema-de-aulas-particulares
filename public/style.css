@@ -58,30 +58,23 @@ header .links a:hover::after {
 }
 
 .new {
-    width: 800px;
-    padding: 5px 0;
-    margin: 30px auto 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.new button {
+    float: right;
     height: 36px;
-    width: 150px;
-    background-color: #32ff7e ;
+    width: auto;
+    padding: 8px 32px;
+    background-color: #3d3d3d;
     border: none;
     border-radius: 30px;
     font-weight: bold;
-    color: #3d3d3d;
+    color: #fff;
     cursor: pointer;
     transition: .4s;
+    margin-bottom: 16px;
 }
 
-.new button:hover {
-    background-color: transparent;
-    border: 1px solid #32ff7e;
-    color: #32ff7e;
+.new:hover {
+    background-color: #0f0f0f;
+    color: #fff;
 }
 
 
@@ -229,7 +222,7 @@ header .links a:hover::after {
 
 .table-container {
     display: block;
-    padding: 40px;
+    padding: 20px 40px;
 }
 
 .table-container table {
@@ -238,6 +231,12 @@ header .links a:hover::after {
 
 .table-container thead tr th {
     text-align: left;
+}
+
+.titlePage {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 16px 0;
 }
 
 td,

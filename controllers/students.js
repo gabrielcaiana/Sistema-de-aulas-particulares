@@ -1,6 +1,6 @@
 const fs = require("fs")
 const data = require("../data.json")
-const { calculatorAge, graduation, date } = require('../utills')
+const {graduation, date } = require('../utills')
 
 exports.index = function(req, res) {
     const students = data.students.map( (student) =>{
@@ -66,7 +66,7 @@ exports.show = function(req, res) {
 
     const student = {
         ...foundStudent,
-        birth: (date.birthDay),
+        birth: date(foundStudent.birth).birthDay,
         graduation: graduation(foundStudent.selectEducation)
     }
 
