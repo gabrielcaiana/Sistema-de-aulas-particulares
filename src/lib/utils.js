@@ -1,5 +1,5 @@
 module.exports = {
-    calculatorAge: (timestamp) => {
+    calculatorAge(timestamp){
         const today = new Date()
         const birthDate = new Date(timestamp)
 
@@ -12,7 +12,7 @@ module.exports = {
 
         return age
     },
-    graduation: (selectEducation) => {
+    graduation(selectEducation) {
         if (selectEducation == 'medio') {
             return "Ensino médio completo"
         }
@@ -26,7 +26,7 @@ module.exports = {
             return "Doutorado"
         }
     },
-    date: (timestamp) => {
+    date(timestamp){
         const date = new Date(timestamp)
 
         const year = date.getUTCFullYear()
