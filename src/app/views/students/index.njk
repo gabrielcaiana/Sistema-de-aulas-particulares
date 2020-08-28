@@ -1,29 +1,34 @@
 {% extends 'layout.njk' %}
 
 {% block content %}
-<div class="card table-container">
-<span class="titlePage">Cadastro de Alunos</span>
-<a href="students/register"><button class="new">Novo</button></a>
+    <div class="card table-container">
+        <span class="titlePage">Cadastro de Alunos</span>
+        <a href="students/register">
+            <button class="new">Novo</button>
+        </a>
         <table width="100%">
             <thead>
                 <tr>
-                    <th>Instrutor</th>
-                    <th>Acompanhamento</th>
+                    <th>Alunos</th>
+                    <th>Email</th>
                     <th>Ação</th>
                 </tr>
             </thead>
             <tbody>
-            {% for student in students %}
-            <tr>
-                <td>
-                    <span style="background-image: url( {{ student.avatar_url }} )"></span>
-                    {{ student.name }}</td>
-                <td>
-                </td>
-                <td><a href="/students/{{ student.id }}">Ver</a></td>
-            </tr>
-            {% endfor %}
+                {% for student in students %}
+                    <tr>
+                        <td>
+                            <span style="background-image: url( {{ student.avatar_url }} )"></span>
+                            {{ student.name }}</td>
+                        <td>
+                            {{ student.email }}
+                        </td>
+                        <td>
+                            <a href="/students/{{ student.id }}">Ver</a>
+                        </td>
+                    </tr>
+                {% endfor %}
             </tbody>
         </table>
-</div>
+    </div>
 {% endblock content %}

@@ -1,8 +1,11 @@
 const { calculatorAge, graduation, date } = require("../../lib/utils");
+const students = require("../models/student")
 
 module.exports = {
   index(req, res) {
-    return res.render("students/index");
+    students.all(function(students){
+      return res.render("students/index", {students})
+    })
   },
   create(req, res) {
     return res.render("students/register");
@@ -14,13 +17,26 @@ module.exports = {
         return res.send("Por favor, preencha todos os campos!");
       }
     }
-    return;
+    
+    students.create(req.body, function(){
+      return res.redirect("/students")
+    })
   },
   show(req, res) {
-    return;
+    students.find(req.params.id, function(student){
+      if(!student) return res.send(" student not found!")
+
+      student.birth_date = calculatorAge(student.birth_date)
+      return res.render("students/show", { student });
+    })
   },
   edit(req, res) {
-    return;
+    students.find(req.params.id, function(student){
+      if(!student) return res.send(" student not found!")
+
+      student.birth_date = date(student.birth_date).iso
+      return res.render("students/edit", { student });
+    })
   },
   put(req, res) {
     const keys = Object.keys(req.body);
@@ -29,10 +45,15 @@ module.exports = {
         return res.send("Por favor, preencha todos os campos!");
       }
     }
-    return;
+    
+    students.update(req.body, function(){
+      return res.redirect(`/students/${req.body.id}`)
+    })
   },
   delete(req, res) {
-    return;
+    students.delete(req.body.id, function(){
+      return res.redirect("/students")
+    })
   },
 };
 
