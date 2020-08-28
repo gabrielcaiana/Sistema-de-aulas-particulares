@@ -26,7 +26,7 @@ module.exports = {
     students.find(req.params.id, function(student){
       if(!student) return res.send(" student not found!")
 
-      student.birth_date = calculatorAge(student.birth_date)
+      student.birth_date = date(student.birth_date).format
       return res.render("students/show", { student });
     })
   },
