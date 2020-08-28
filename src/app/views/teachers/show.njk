@@ -12,25 +12,25 @@
 
             <div class="item">
                 <div>Idade</div>
-                <div>{{ teacher.age}}</div>
+                <div>{{ teacher.birth_date}}</div>
             </div>
 
             <div class="item">
                 <div>Grau de escolaridade</div>
                 <div>
-                    {{ teacher.graduation }}
+                    {{ teacher.education_level }}
                 </div>
             </div>
 
             <div class="item">
                 <div>Tipo de aula</div>
-                <div>{{teacher.typeAula}}</div>
+                <div>{{teacher.class_type}}</div>
             </div>
 
             <div class="item">
                 <div>Acompanhemento</div>
                 <div>
-                    {% for atuacoes in teacher.atuacao %}
+                    {% for atuacoes in teacher.subjects_taught %}
                         <span>{{ atuacoes }}</span>
                     {% endfor %}
                 </div>
