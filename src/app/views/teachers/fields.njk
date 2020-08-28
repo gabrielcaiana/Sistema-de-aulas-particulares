@@ -10,16 +10,16 @@
 
 <div class="item">
     <div>Data de nascimento</div>
-    <input type="date" name="birth_date" value="{{ teacher.birth_date_date }}">
+    <input type="date" name="birth_date" value="{{ teacher.birth_date }}">
 </div>
 
 <div class="item">
     <div>Grau de escolaridade</div>
     <select name="education_level">
-        <option value="medio" {% if teachers.education_level == "medio"%} selected="selected" {% endif %}>Ensino médio completo</option>
-        <option value="superior" {% if teachers.education_level == "superior"%} selected="selected" {% endif %}>Ensino superior completo</option>
-        <option value="mestrado" {% if teachers.education_level == "mestrado"%} selected="selected" {% endif %}>Mestrado</option>
-        <option value="doutorado" {% if teachers.education_level == "doutorado"%} selected="selected" {% endif %}>Doutorado</option>
+        <option value="medio" {% if teacher.education_level == "medio"%} selected="selected" {% endif %}>Ensino médio completo</option>
+        <option value="superior" {% if teacher.education_level == "superior"%} selected="selected" {% endif %}>Ensino superior completo</option>
+        <option value="mestrado" {% if teacher.education_level == "mestrado"%} selected="selected" {% endif %}>Mestrado</option>
+        <option value="doutorado" {% if teacher.education_level == "doutorado"%} selected="selected" {% endif %}>Doutorado</option>
     </select>
 </div>
 

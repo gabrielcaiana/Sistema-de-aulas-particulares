@@ -34,7 +34,15 @@ module.exports = {
     })
   },
   edit(req, res) {
-    return;
+    teachers.find(req.params.id, function(teacher){
+      if(!teacher) return res.send(" Teacher not found!")
+
+      teacher.birth_date = date(teacher.birth_date).iso
+      teacher.subjects_taught = teacher.subjects_taught.split(",")
+      teacher.created_at = date(teacher.created_at).format
+
+      return res.render("teachers/edit", { teacher });
+    })
   },
   put(req, res) {
     const keys = Object.keys(req.body);
@@ -43,10 +51,15 @@ module.exports = {
         return res.send("Por favor, preencha todos os campos!");
       }
     }
-    return;
+    
+    teachers.update(req.body, function(){
+      return res.redirect(`/teachers/${req.body.id}`)
+    })
   },
   delete(req, res) {
-    return;
+    teachers.delete(req.body.id, function(){
+      return res.redirect("/teachers")
+    })
   },
 };
 
