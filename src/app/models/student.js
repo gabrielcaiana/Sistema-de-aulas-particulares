@@ -3,9 +3,7 @@ const { calculatorAge, graduation, date } = require("../../lib/utils");
 
 module.exports = {
   all(callback) {
-    db.query(`SELECT * FROM students ORDER BY name ASC`, function (
-      err,
-      results
+    db.query(`SELECT * FROM students ORDER BY name ASC`, function (err,results
     ) {
       const students = results.rows.map(function (student) {
         spreadstudent = {
