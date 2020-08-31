@@ -2,8 +2,14 @@
 
 {% block content %}
 <div class="card table-container">
-<span class="titlePage">Cadastro de Professores</span>
+<span class="titlePage"></span>
+<div class="header">
 <a href="teachers/register"><button class="new">Novo</button></a>
+<form action="/teachers" mehotd="GET">
+    <input type="text" name="filter" placeholder="Nome ou matéria" value="{{filter}}">
+    <button type="submit">Filtrar</button>
+</form>
+</div>
         <table width="100%">
             <thead>
                 <tr>

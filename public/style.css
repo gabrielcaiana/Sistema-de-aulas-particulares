@@ -299,3 +299,31 @@ tbody tr td:nth-child(2) span {
     color: #555;
     font-size: 14px;
 }
+
+/*Filters*/
+.table-container .header form input {
+    padding: 8px 8px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    width: 200px;
+    margin: 0 8px 0 0;
+}
+
+.table-container .header form input:focus {
+    outline: none;
+}
+
+.table-container .header form button {
+    background-color: #777;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.table-container .header form button:hover {
+    background-color: #0f0f0f;
+}
