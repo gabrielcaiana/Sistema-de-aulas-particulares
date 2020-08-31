@@ -1,6 +1,6 @@
 <div class="item">
     <div>Avatar URL</div>
-    <input type="url" name="avatar_url" placeholder="http://" value="{{ student.avatar_url }}"> 
+    <input type="url" name="avatar_url" placeholder="http://" value="{{ student.avatar_url }}">
 </div>
 
 <div class="item">
@@ -29,10 +29,18 @@
         <option value="2a" {% if student.education_level == "2a"%} selected="selected" {% endif %}>2º Ano do ensino médio</option>
         <option value="3a" {% if student.education_level == "3a"%} selected="selected" {% endif %}>3º Ano do ensino médio</option>
     </select>
+</div>
 
-    <div class="item">
+<div class="item">
     <div>Carga horária semanal</div>
     <input type="number" name="hours" value="{{ student.hours }}">
 </div>
-</div>
 
+<div class="item">
+    <div>Professor</div>
+    <select name="teacher">
+        {%for teacher in teacherOptions%}
+            <option value="{{ teacher.id }}" {%if student.teacher_id == teacher.id %} selected{% endif%}>{{teacher.name}}</option>
+        {%endfor%}
+    </select>
+</div>
