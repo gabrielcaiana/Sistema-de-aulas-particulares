@@ -1,11 +1,14 @@
 {% extends 'layout.njk' %}
 
 {% block content %}
-    <div class="card table-container">
-        <span class="titlePage">Cadastro de Alunos</span>
-        <a href="students/register">
-            <button class="new">Novo</button>
-        </a>
+<div class="table-container">
+    <div class="header">
+        <a href="students/register"><button class="new">Novo</button></a>
+        <form action="/students" mehotd="GET">
+            <input type="text" name="filter" placeholder="Nome ou Email" value="{{filter}}">
+            <button type="submit">Filtrar</button>
+        </form>
+    </div>
         <table width="100%">
             <thead>
                 <tr>
@@ -30,5 +33,11 @@
                 {% endfor %}
             </tbody>
         </table>
+
+        <div class="pagination"
+            data-page={{pagination.page}}
+            data-total={{pagination.total}}
+            data-filter={{filter}}
+        ></div>
     </div>
 {% endblock content %}

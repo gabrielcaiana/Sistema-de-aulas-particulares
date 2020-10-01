@@ -1,11 +1,28 @@
-const { calculatorAge, graduation, date } = require("../../lib/utils");
+const {date } = require("../../lib/utils");
 const students = require("../models/student")
 
 module.exports = {
-  index(req, res) {
-    students.all(function(students){
-      return res.render("students/index", {students})
-    })
+    index(req, res) {
+      let { filter, page, limit } = req.query
+      page = page || 1
+      limit = limit || 2
+      let offset = limit * (page - 1 )
+  
+      const params = {
+        filter,
+        page,
+        limit,
+        offset,
+        callback(students) {
+          const pagination = {
+            total: Math.ceil(students[0].total / limit),
+            page
+          }
+          return res.render("students/index", {students, pagination, filter})
+        }
+      }
+      
+      students.paginate(params)
   },
   create(req, res) {
     students.teacherOptions(function(options){
