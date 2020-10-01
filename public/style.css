@@ -16,6 +16,12 @@ h3 {
     color: #fff;
 }
 
+.pageTitle {
+    font-size: 28px;
+    text-align: center;
+    margin: 32px 0;
+}
+
 header {
     width: 100%;
     padding: 20px;
