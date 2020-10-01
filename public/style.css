@@ -78,7 +78,7 @@ header .links a:hover::after {
 }
 
 
-.card {
+.table-container, .card {
     width: 800px;
     min-height: 500px;
     background-color: #ffffff;
@@ -219,7 +219,6 @@ header .links a:hover::after {
 }
 
 /* Table index*/
-
 .table-container {
     display: block;
     padding: 20px 40px;
@@ -326,4 +325,29 @@ tbody tr td:nth-child(2) span {
 
 .table-container .header form button:hover {
     background-color: #0f0f0f;
+}
+
+.table-container {
+    display: grid;
+    grid-template: 64px 1fr 24px / 1fr;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination a,
+.pagination span {
+    color: #3d3d3d;
+    text-decoration: none;
+    margin-right: 12px;
+    transition: .2s;
+}
+
+.pagination a:hover {
+    color: #32ff7e;
+    font-weight: 600;
+    border-bottom: 1px solid #32ff7e;
 }

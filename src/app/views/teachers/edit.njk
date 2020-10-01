@@ -5,11 +5,11 @@
         <div class="avatar" style="background: url({{ teacher.avatar_url}}) no-repeat center center"></div>
         <div class="detalhes">
             <h3>Editar Professor</h3>
-             <form method="POST" action="/teachers?_method=PUT">
+            <form method="POST" action="/teachers?_method=PUT">
                 {% include 'teachers/fields.njk' %}
                 <input type="hidden" name="id" value="{{teacher.id}}">
                 <button type="submit">Salvar</button>
-                
+
             </form>
 
             <form id="form-delete" method="POST" action="/teachers?_method=DELETE">
@@ -18,4 +18,15 @@
             </form>
         </div>
     </div>
+
+    <script>
+        const formDelete = document.querySelector("#form-delete")
+        formDelete.addEventListener("submit", function (event) {
+            const confirmation = confirm("Deseja Deletar?")
+            if (!confirmation) {
+                event.preventDefault()
+            }
+        })
+    </script>
+
 {% endblock content %}
